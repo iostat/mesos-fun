@@ -38,7 +38,7 @@ You'll need to following to run this example:
 This section will be expanded later, but for now, here's a quick start. This assumes you've already created a blank project in Google Cloud Platform, and have add an SSH Public key (under Compute Engine -> Metadata -> SSH Keys) 
   0. `git clone https://github.com/iostat/mesos-fun.git && cd mesos-fun`
   1. `sed -i -e "s/gcp-project-name/<your-project-name>/g" hosts-defs`
-  2. `sudo cat hosts-defs >> /etc/hosts`
+  2. `cat hosts-defs | sudo tee -a /etc/hosts`
   3. `cd terraform`
   4. `edit terraform.tfvars.example #and save as terraform.tfvars`
   5. See [Terraform's GCP Provider instructions][2] for more information about the `account-file` value
