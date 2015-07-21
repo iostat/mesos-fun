@@ -17,7 +17,7 @@ Three nodes are "masters", and they:
 
 The other five nodes are "slaves", which:
   * are named `slave[1-5]`
-  * have IP addresses of `10.0.0.2[1-5]`
+  * have IP addresses of `10.0.0.11[1-5]`
   * run mesos-slave as worker nodes 
   * mount the Gluster volumes hosted on the Masters at `/storage/<volume_name>`
 
@@ -32,9 +32,23 @@ You'll need to following to run this example:
   * cURL
   * Bash
   * Your `$PATH` properly set up to run all these wonderful things
+  * Google Cloud SDK properly authorized and configured (will change in the future)
 
-
+### Overview
+This section will be expanded later, but for now, here's a quick start. This assumes you've already created a blank project in Google Cloud Platform, and have add an SSH Public key (under Compute Engine -> Metadata -> SSH Keys) 
+  0. `git clone https://github.com/iostat/mesos-fun.git && cd mesos-fun`
+  1. `sed -i -e "s/gcp-project-name/<your-project-name>/g" hosts-defs`
+  2. `sudo cat hosts-defs >> /etc/hosts`
+  3. `cd terraform`
+  4. `edit terraform.tfvars.example #and save as terraform.tfvars`
+  5. See [Terraform's GCP Provider instructions][2] for more information about the `account-file` value
+  6. `terraform apply`
+  7. `gcloud compute ssh master1 --ssh-flag "-D 54321"`
+  8. Set up your system to use localhost:54321 as a systemwide SOCKS proxy
+  9. Set up your system to use "c.<your-project-name>.internal" as a DNS suffix
+  10. Open a browser to http://master1:5050/
 
 
 <!-- References -->
 [1]: https://cloud.google.com/compute/docs/instances-and-network#staticnetworkaddress
+[2]: 

@@ -1,0 +1,9 @@
+10.0.0.11 master1.c.gcp-project-name.internal
+10.0.0.12 master2.c.gcp-project-name.internal
+10.0.0.13 master3.c.gcp-project-name.internal
+
+10.0.0.111 slave1.c.gcp-project-name.internal
+10.0.0.112 slave2.c.gcp-project-name.internal
+10.0.0.113 slave3.c.gcp-project-name.internal
+10.0.0.114 slave4.c.gcp-project-name.internal
+10.0.0.115 slave5.c.gcp-project-name.internal
