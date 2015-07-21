@@ -1,2 +1,4 @@
 *.tfvars
+*.tfstate
+*.tfstate.backup
 *.account-file
