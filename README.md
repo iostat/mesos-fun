@@ -45,7 +45,7 @@ This section will be expanded later, but for now, here's a quick start. This ass
   6. `terraform apply`
   7. `gcloud compute ssh master1 --ssh-flag "-D 54321"`
   8. Set up your system to use localhost:54321 as a systemwide SOCKS proxy
-  9. Set up your system to use "c.<your-project-name>.internal" as a DNS suffix
+  9. Set up your system to use `c.<your-project-name>.internal` as a DNS suffix
   10. Open a browser to http://master1:5050/
 
 
