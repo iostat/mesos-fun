@@ -51,4 +51,4 @@ This section will be expanded later, but for now, here's a quick start. This ass
 
 <!-- References -->
 [1]: https://cloud.google.com/compute/docs/instances-and-network#staticnetworkaddress
-[2]: 
+[2]: https://terraform.io/docs/providers/google/index.html 
